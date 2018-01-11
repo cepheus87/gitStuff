@@ -1,0 +1,127 @@
+git pull  (--all)  - all robi to dla wszystkich galezi - ale rowniez dla wszystkich remotes
+
+##############
+
+merge
+
+chcemy zmiany z develop dodac do master
+
+bedac na branch master:
+git merge develop
+
+##############
+
+rebase
+
+chcemy galaz develop przeniesc "pod" mastera - zeby develop uwzglednial zmiany z mastera:
+
+bedac na develop
+rebase (-i) master  (interactive)
+
+
+jezeli wystapia konflikty
+
+When you have resolved this problem, run "git rebase --continue".
+If you prefer to skip this patch, run "git rebase --skip" instead.
+To check out the original branch and stop rebasing, run "git rebase --abort".
+
+
+##############
+
+show all branches names (also remote)
+nazwy zewnetrznych galezi
+
+git branch -a
+
+
+usuwanie galezi
+
+git branch -d
+
+
+##############
+
+rozwiazywanie konfliktow, conflicts resolving
+
+git mergetool
+
+
+##############
+
+
+sprawdzanie roznic, differences
+
+git difftool
+
+
+roznica w pliku pomiedzy 2 commitami
+
+git difftool [--options] <commit> <commit> [--] [<path>...]
+
+######
+
+push branch not present in the remote:
+
+git push --set-upstream <origin> <branch_name>
+
+
+
+###########
+
+revert changes in file
+anulacja zmian w pliku
+
+git checkout filename
+
+######
+
+revert all changes (in all files)
+cofniecie wszystkich zmian 
+
+git reset --hard
+
+
+
+####
+remote settings:
+
+
+to see remote settings:
+git remote -v
+
+
+to add remote:
+git remote add HT https://github.com/HealthTell/rcode.git
+
+
+to check if your default push and pull settings
+however it is safer to use remote name and branch name: git push origin master
+
+git remote show origin
+
+to rename:
+git remote rename oldName newName
+to remove:
+git remote remove someName
+
+
+####
+
+search in logs
+git log --all --grep "linux fixes"
+
+
+
+
+####
+create git repo from the scratch
+
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin https://github.com/username/Hello-World.git
+
+### but repo has to be created in the github
+
+git push origin master
