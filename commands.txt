@@ -125,3 +125,14 @@ git remote add origin https://github.com/username/Hello-World.git
 ### but repo has to be created in the github
 
 git push origin master
+
+
+
+
+### SSL problems:
+
+added to the git command (one line)
+GIT_SSL_NO_VERIFY=true
+
+set pernament
+git config http.sslVerify "false"
