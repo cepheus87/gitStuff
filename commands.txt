@@ -136,3 +136,13 @@ GIT_SSL_NO_VERIFY=true
 
 set pernament
 git config http.sslVerify "false"
+
+
+
+#### submodules
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+git submodule add git://github.com/chneukirchen/rack.git rack
+
+when clone repo with submodule, or there are changes, you have to:
+git submodule update
