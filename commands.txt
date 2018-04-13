@@ -142,7 +142,17 @@ git config http.sslVerify "false"
 #### submodules
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
+https://docs.gitlab.com/ce/ci/git_submodules.html
+
 git submodule add git://github.com/chneukirchen/rack.git rack
 
 when clone repo with submodule, or there are changes, you have to:
-git submodule update
+
+# the same two commands to CI in gitlab
+git submodule init
+git submodule update --remote 
+
+--remote to see external repository
+
+to remove information about modifications in submodule:
+git submodule update --recursive 
